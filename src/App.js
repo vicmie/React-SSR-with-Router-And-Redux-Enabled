@@ -7,13 +7,15 @@ import  HomePage from './pages/home'
 // NOTE: Global stylesheet
 // FIXME: indent
 import './App.css'
+import FilteredPage from './pages/filterPage'
 
 export default class SETA extends Component {
   render () {
     return (
       <StrictMode>
         <Switch>
-          <Route path='/' component={HomePage} />
+          <Route exact path='/' component={HomePage} />
+          <Route path='/apply_filter' component={FilteredPage} />
         </Switch>
       </StrictMode>
     )

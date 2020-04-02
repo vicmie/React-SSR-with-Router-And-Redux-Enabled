@@ -17,6 +17,10 @@ p {
 .center{
   text-align: center;
 }
+.flex{
+  display: inline-flex;
+  padding: 1em 0 0 0;
+}
 .grid_provider{
   display: grid;
   grid-gap: 1em;

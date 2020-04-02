@@ -5,7 +5,6 @@ import '../vendor/home.css'
 import { Container } from '../hoc/container'
 import FilteredCars from '../components/filteredCars'
 import Helmet from 'react-helmet'
-import { ReactComponent as SearchIcon } from '../assets/svg/av/svg/production/ic_repeat_48px.svg'
 import { Search } from '@material-ui/icons'
 import { Button } from '@material-ui/core'
 import { connect } from 'react-redux'
@@ -75,7 +74,11 @@ class HomePage extends React.Component {
                 />
               </form>
               <div>
-                <Button variant='contained' color='primary'>
+                <Button
+                  variant='contained'
+                  color='primary'
+                  onClick={() => this.props.history.push('apply_filter')}
+                >
                   apply more filters{' '}
                 </Button>
               </div>
