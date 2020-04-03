@@ -44,10 +44,10 @@ const FilteredCars = ({ filter = [] }) => {
                     </strong>
                     {/* dynamic content */}
                     <strong>
-                      <small >{Car.car_model}</small>
+                      <small>{Car.car_model}</small>
                     </strong>
                     <strong>
-                      <small >{Car.car_model_year}</small>
+                      <small>{Car.car_model_year}</small>
                     </strong>
                     <strong>
                       <small>
@@ -75,13 +75,13 @@ const FilteredCars = ({ filter = [] }) => {
                     </strong>
                     {/* dynamic content */}
                     <strong>
-                      <small >{Car.country}</small>
+                      <small>{Car.country}</small>
                     </strong>
                     <strong>
-                      <small >{Car.gender}</small>
+                      <small>{Car.gender}</small>
                     </strong>
                     <strong>
-                      <small >{Car.job_title}</small>
+                      <small>{Car.job_title}</small>
                     </strong>
                   </GridProvider>
                   {/* email and bio stays here */}
@@ -108,13 +108,15 @@ const FilteredCars = ({ filter = [] }) => {
               less
             </Button>
           )}
-          <Button
-            variant='contained'
-            color='primary'
-            onClick={Navnext.bind(this)}
-          >
-            more
-          </Button>
+          {filter.length > 4 && (
+            <Button
+              variant='contained'
+              color='primary'
+              onClick={Navnext.bind(this)}
+            >
+              more
+            </Button>
+          )}
         </div>
       </GridProvider>
     </>
