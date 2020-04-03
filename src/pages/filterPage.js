@@ -3,6 +3,7 @@ import { NavProvider } from '../hoc/nav_provider'
 import { SortSharp } from '@material-ui/icons'
 import { Helmet } from 'react-helmet'
 import { Container } from '../hoc/container'
+import ApplyFilter from '../components/applyFilter'
 class FilteredPage extends React.Component {
   render () {
     return (
@@ -18,6 +19,7 @@ class FilteredPage extends React.Component {
                 Filter
               </h3>
             {/* displaying the card here */}
+                <ApplyFilter/>
             </Container>
           </div>
         </NavProvider>
@@ -27,3 +29,5 @@ class FilteredPage extends React.Component {
 }
 
 export default FilteredPage
+
+
